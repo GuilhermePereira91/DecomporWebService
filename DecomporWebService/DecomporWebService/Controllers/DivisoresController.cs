@@ -1,5 +1,5 @@
 ﻿using DecomporWebService.Models;
-using DecomporWebService.Services.DivisoresImplementations;
+using DecomporWebService.Services.DivisoresService;
 using Microsoft.AspNetCore.Mvc;
 using System;
 
@@ -19,7 +19,7 @@ namespace DecomporWebService.Controllers
         }
 
         [HttpPost("obtertodos")]
-        public IActionResult ObterTodos(int numero)
+        public IActionResult ObterTodos([FromBody] int numero)
         {
             if (numero <= 0)
                 return BadRequest("Valor inválido. O número deverá ser maior que zero e inteiro.");
@@ -28,7 +28,7 @@ namespace DecomporWebService.Controllers
         }
 
         [HttpPost("obternaturais")]
-        public IActionResult ObterNaturais(int numero)
+        public IActionResult ObterNaturais([FromBody] int numero)
         {
             if (numero <= 0)
                 return BadRequest("Valor inválido. O número deverá ser maior que zero e inteiro.");
@@ -37,7 +37,7 @@ namespace DecomporWebService.Controllers
         }
 
         [HttpPost("obterprimos")]
-        public IActionResult ObterPrimos(int numero)
+        public IActionResult ObterPrimos([FromBody] int numero)
         {
             if (numero <= 0)
                 return BadRequest("Valor inválido. O número deverá ser maior que zero e inteiro.");
