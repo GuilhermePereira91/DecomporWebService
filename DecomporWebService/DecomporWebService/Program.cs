@@ -1,4 +1,4 @@
-using DecomporWebService.Services.DivisoresImplementations;
+using DecomporWebService.Services.DivisoresService;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -6,7 +6,7 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllers();
 //Injeção de Dependencia
-builder.Services.AddScoped<IDivisoresService, DivisoresServiceImplementation>();
+builder.Services.AddScoped<IDivisoresService, DivisoresService>();
 
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
