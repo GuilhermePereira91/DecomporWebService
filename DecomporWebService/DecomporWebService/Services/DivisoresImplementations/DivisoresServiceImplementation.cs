@@ -3,7 +3,7 @@ using DecomporWebService.Models;
 
 namespace DecomporWebService.Services.DivisoresImplementations
 {
-    public class DivisoresServiceImplementation : IDecomporDivisoresService
+    public class DivisoresServiceImplementation : IDivisoresService
     {
         public DivisoresResposta ObterTodos(int numero)
         {

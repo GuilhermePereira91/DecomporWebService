@@ -2,7 +2,7 @@
 
 namespace DecomporWebService.Services.DivisoresImplementations
 {
-    public interface IDecomporDivisoresService
+    public interface IDivisoresService
     {
         DivisoresResposta ObterTodos(int numero);
         DivisoresResposta ObterNaturais(int numero);
